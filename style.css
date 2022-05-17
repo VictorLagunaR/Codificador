@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --cor-fundo:#F3F5FC;
+    --cor-botaoCinza: #D8DFE8;
+    --cor-azulEscuro: #0A3871;
+    --cor-mensagem-ajuda:#495057;
+}
+
+body{
+    background:var(--cor-fundo);
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+main{
+    height:auto;
+    display: flex;
+    width:1440px;
+    margin: 20px auto;
+    position: relative;
+}
+
+footer{
+    display: block;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+div.github img{
+    width:30px;
+    margin-right: 5px;
+}
+
+#logo{
+    height:50px;
+    width: 50px;
+}
+/*estilização da primeira parte da pagina*/
+    #mensagem{
+        margin-top: 25px;
+        display: inline;
+    }
+
+    form{
+        width:800px;
+        margin:30px 120px
+    }
+
+    .digitar-texto{
+        width:95%;
+        height: 450px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: var(--cor-azulEscuro);
+        resize: none;
+    }
+
+    .digitar-texto::placeholder{
+        color: var(--cor-azulEscuro);
+    }
+
+    .digitar-texto:focus{
+        border: none;
+        outline: 0;
+    }
+
+    #importante{
+        display:flex;
+        gap:10px;
+        align-items: center;
+        color: var(--cor-mensagem-ajuda);
+        margin-bottom:20px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    #importante ion-icon{
+        font-size:20px;
+    }
+/*finalização da mesma*/
+
+/*estilização dos botões*/
+    .botoes{
+        display:flex;
+        gap:20px;
+    }
+
+    #criptografar , #descriptografar , #copiar{
+        width:328px;
+        height: 67px;
+        border-radius:24px;
+        padding: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height:19px;
+        text-align: center;
+        outline:0;
+        box-shadow: none;
+    }
+
+    #criptografar{
+        background: var(--cor-azulEscuro);
+        color: #f3f3f3;
+        font-weight: 400;
+        font-size: 16px;
+        line-height:19px;
+        border-color: var(--cor-azulEscuro);
+        border: none;
+    }
+
+    #criptografar:hover , #descriptografar:hover , #copiar:hover{
+        cursor:pointer
+    }
+
+    #descriptografar , #copiar{
+        border:var(--cor-azulEscuro) 1px solid;
+        background: var(--cor-botaoCinza);
+        color: var(--cor-azulEscuro);
+    }
+
+    #copiar{
+        background:transparent;
+        position: absolute;
+        bottom: 33px;
+        display: none;
+    }
+/*finalização da estilização dos botões*/
+
+/*segunad parte, área que o texto aparecerá criptografado*/
+#mensagem-criptografada{
+    border-radius:32px;
+    background:white;
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+#mensagem-parte-criptografada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-parte-criptografada{
+    width:300px;
+    height:300px;
+    margin: 26px 0;
+}
+
+#texto-criptografado{
+    display: none;
+    width:300px;
+    height:500px;
+    margin: 26px auto;
+    overflow: auto;
+    resize:none;
+    border:none;
+    font-size: 24px;
+    color: var(--cor-azulEscuro);
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-family: 'Inter', sans-serif;;
+}
+
+
+
+.texto h1{
+    text-align: center;
+    color: #343A40;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    margin:24px;
+}
+
+.texto p {
+    color: #495057;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+/*finalização da segunda parte*/
+
+@media screen and (max-width:1400px){
+
+    main{
+        width:1000px;
+        height:600px;
+        margin:10px auto;
+    }
+    #mensagem{
+        width:500px;
+        height:580px;
+        margin-top:15px;
+    }
+    form{
+        width:450px;
+        margin:19px auto;
+    }
+
+    #mensagem-criptografada{
+        width:310px;
+        height:600px;
+        margin-left:50px;
+    }
+
+    #mensagem-criptografada img{
+        width:290px;
+        height:290px;
+        margin:35px auto;
+    }
+
+    #mensagem-criptografada button{
+        bottom:6px;
+        width:250px;
+    }
+    #mensagem-criptografada textarea{
+        width:250px;
+        height:480px;
+    }
+}
+
+@media screen and (max-width:420px){
+    
+    main{
+        flex-direction: column;
+        width:300px;
+        gap:10px;
+        height: auto;
+        margin:10px 10px;
+        line-height: 40px;
+    }
+    #mensagem{
+        width:350px;
+        margin:10px auto;
+    }
+    form{
+        width:350px;
+        margin:0px;
+    }
+    .digitar-texto{
+        width:350px
+    }
+    .botoes{
+        width:350px;
+        display:flex;
+        flex-direction: column;
+        margin:10px auto;
+        
+    }
+    #criptografar, #descriptografar , #copiar{
+        width:350px;
+        font-size: 21px;
+    }
+
+    #mensagem-criptografada{
+        margin-top:90px;
+        margin-left:0px;
+        width:350px;
+        height:auto;
+        margin-bottom: 0;
+    }
+    
+    #mensagem-criptografada button{
+        width:328px;
+    }
+
+    #mensagem-criptografada textarea{
+        width:330px;
+    }
+
+    #img-parte-criptografada{
+        display:none;
+    }
+
+    .texto h1{
+        font-size: 23px;
+        font-style: bold;
+    }
+
+    .texto p{
+        line-height:21px;
+        font-size: 19px;
+    }
+    
+    #copiar{
+        position:static;
+        margin-bottom:10px;
+    }
+
+    #texto-criptografado{
+        height:300px;
+        margin:15px auto;
+    }
+}
