@@ -34,7 +34,6 @@ footer{
 }
 
 a{
-    text-decoration: none;
     color: black;
 }
 
@@ -251,10 +250,10 @@ div.github img{
     
     main{
         flex-direction: column;
-        width:300px;
+        width:350px;
         gap:10px;
         height: auto;
-        margin:10px 10px;
+        margin:10px auto;
         line-height: 40px;
     }
     #mensagem{
